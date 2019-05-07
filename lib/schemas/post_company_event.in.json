@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "countryCode": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "requests": {
+                    "items": {
+                        "properties": {
+                            "companyId": {
+                                "description": "Company identifier",
+                                "type": "string"
+                            },
+                            "date": {
+                                "description": "Earliest date to fetch events for",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

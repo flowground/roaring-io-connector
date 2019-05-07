@@ -1,0 +1,226 @@
+{
+    "title": "CompanyAPI",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/roaring.io/1.0/swagger.json",
+    "envVars": {
+        "OAUTH_CLIENT_ID": {
+            "description": "OAuth Client ID"
+        },
+        "OAUTH_CLIENT_SECRET": {
+            "description": "OAuth Client Secret"
+        }
+    },
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.roaring.io/company/1.0",
+                    "http://api.roaring.io/company/1.0",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "default": {
+                "label": "default",
+                "viewClass": "OAuthFieldView"
+            }
+        },
+        "oauth2": {
+            "client_id": "{{OAUTH_CLIENT_ID}}",
+            "client_secret": "{{OAUTH_CLIENT_SECRET}}",
+            "auth_uri": "https://api.roaring.io/authorize"
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_company_board_members": {
+            "main": "./lib/actions/get_company_board_members.js",
+            "title": "get_company_board_members",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_company_board_members.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_company_board_members": {
+            "main": "./lib/actions/post_company_board_members.js",
+            "title": "post_company_board_members",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_company_board_members.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_company_credit_decision": {
+            "main": "./lib/actions/get_company_credit_decision.js",
+            "title": "get_company_credit_decision",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_company_credit_decision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_company_economy_overview": {
+            "main": "./lib/actions/get_company_economy_overview.js",
+            "title": "get_company_economy_overview",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_company_economy_overview.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_company_economy_overview": {
+            "main": "./lib/actions/post_company_economy_overview.js",
+            "title": "post_company_economy_overview",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_company_economy_overview.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_company_event": {
+            "main": "./lib/actions/post_company_event.js",
+            "title": "post_company_event",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_company_event.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_company_overview": {
+            "main": "./lib/actions/get_company_overview.js",
+            "title": "get_company_overview",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_company_overview.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_company_overview": {
+            "main": "./lib/actions/post_company_overview.js",
+            "title": "post_company_overview",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_company_overview.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_company_signatory": {
+            "main": "./lib/actions/get_company_signatory.js",
+            "title": "get_company_signatory",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_company_signatory.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_company_signatory": {
+            "main": "./lib/actions/post_company_signatory.js",
+            "title": "post_company_signatory",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_company_signatory.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_company_simple_search": {
+            "main": "./lib/actions/get_company_simple_search.js",
+            "title": "get_company_simple_search",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_company_simple_search.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

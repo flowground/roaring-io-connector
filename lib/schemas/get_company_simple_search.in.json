@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "countryCode": {
+            "required": true,
+            "type": "string"
+        },
+        "companyName": {
+            "required": false,
+            "type": "string"
+        },
+        "town": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "countryCode": {
+            "required": true,
+            "type": "string"
+        },
+        "companyId": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
